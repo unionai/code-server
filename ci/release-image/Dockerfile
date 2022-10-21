@@ -18,6 +18,7 @@ RUN apt-get update \
   nano \
   git \
   git-lfs \
+  ipykernel \
   python3-pip \
   python-is-python3 \
   procps \
