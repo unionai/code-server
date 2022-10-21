@@ -18,7 +18,6 @@ RUN apt-get update \
   nano \
   git \
   git-lfs \
-  ipykernel \
   python3-pip \
   python-is-python3 \
   procps \
@@ -71,6 +70,7 @@ RUN mkdir -p /home/coder/flyte.src
 RUN git clone https://github.com/flyteorg/flyte-vscode-demo.git /tmp/flyte-vscode-demo \
   && cp -r /tmp/flyte-vscode-demo/flyte_demo/flyte_demo /home/coder/flyte.src \
   && sudo pip install -r /tmp/flyte-vscode-demo/flyte_demo/requirements.txt \
+  && sudo pip install ipykernel \
   && rm -rf /tmp/flyte-vscode-demo
 
 # vscode extensions
