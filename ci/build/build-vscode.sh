@@ -82,7 +82,9 @@ main() {
     "newsletterSignupUrl": "https://www.research.net/r/vsc-newsletter",
     "linkProtectionTrustedDomains": [
       "https://open-vsx.org",
-      "https://*.union.ai"
+      "*.union.ai",
+      "*.flyte.org",
+      "*.slack.com"
     ],
     "aiConfig": {
       "ariaKey": "code-server"
