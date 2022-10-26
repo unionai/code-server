@@ -53,7 +53,7 @@ ENV ENTRYPOINTD=${HOME}/entrypoint.d
 EXPOSE 8080
 
 # flytekit
-RUN pip install flytekit==v1.2.2b1
+RUN pip install flytekit==v1.2.3
 
 # flytectl
 RUN curl -sL https://ctl.flyte.org/install | bash
@@ -70,6 +70,7 @@ RUN mkdir -p /home/coder/flyte.src
 RUN git clone https://github.com/flyteorg/flyte-vscode-demo.git /tmp/flyte-vscode-demo \
   && cp -r /tmp/flyte-vscode-demo/flyte_demo/flyte_demo /home/coder/flyte.src \
   && sudo pip install -r /tmp/flyte-vscode-demo/flyte_demo/requirements.txt \
+  && sudo pip install ipykernel \
   && rm -rf /tmp/flyte-vscode-demo
 
 # vscode extensions
